@@ -22,8 +22,8 @@ Completed user stories:
    * Upon release, the message should continue to reveal the green background. When the animation it complete, it should hide the message.
    * After 260 pts, the icon should change to the delete icon and the background color should change to red.
    * Upon release, the message should continue to reveal the red background. When the animation it complete, it should hide the message.
- * Optional: Panning from the edge should reveal the menu
+* Optional: Panning from the edge should reveal the menu
 
 Walkthrough of all user stories:
 
-<img src="http://i.imgur.com/FXuh7v2.gif">
+<img src="http://i.imgur.com/aWxgkx7.gif">
