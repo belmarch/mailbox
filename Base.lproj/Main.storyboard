@@ -12,36 +12,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu" id="zGc-DC-aCC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" id="cJj-6k-MdN">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav" id="ic1-fj-Mi3">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" id="ARK-Pc-rMS">
+                                        <rect key="frame" x="0.0" y="53" width="320" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help_label" id="xKX-YU-3Zr">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="MUc-eo-U9s">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="894"/>
+                                        <rect key="frame" x="0.0" y="123" width="320" height="500"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav" id="ic1-fj-Mi3">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" id="ARK-Pc-rMS">
-                                                <rect key="frame" x="0.0" y="65" width="320" height="42"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help_label" id="xKX-YU-3Zr">
-                                                <rect key="frame" x="0.0" y="107" width="320" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feed" id="P2O-PH-yrf">
-                                                <rect key="frame" x="0.0" y="230" width="320" height="1202"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
                                             <view contentMode="scaleToFill" id="sOg-AS-DuC">
-                                                <rect key="frame" x="0.0" y="144" width="320" height="85"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delete_icon" id="wzx-Mf-8Yd">
-                                                        <rect key="frame" x="50" y="30" width="25" height="25"/>
+                                                        <rect key="frame" x="250" y="30" width="25" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="archive_icon" id="Or9-ti-P6s">
@@ -74,57 +74,69 @@
                                                 </subviews>
                                                 <gestureRecognizers/>
                                             </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feed" id="P2O-PH-yrf">
+                                                <rect key="frame" x="0.0" y="85" width="320" height="1202"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <gestureRecognizers/>
                                     </scrollView>
+                                    <imageView alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reschedule" id="Bg1-vE-WKl">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="36R-fw-4vQ" appends="YES" id="uQB-4M-5kT"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list" id="GCI-Bg-k8R">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="1Uc-ed-Sjk" appends="YES" id="rmY-fU-dqt"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                             </view>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu" id="zGc-DC-aCC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reschedule" id="Bg1-vE-WKl">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list" id="GCI-Bg-k8R">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.90398602220000002" green="0.55151747689999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="7H2-i9-HaZ" appends="YES" id="09L-4L-sJM"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="archiveView" destination="Or9-ti-P6s" id="wD6-3w-erD"/>
                         <outlet property="backgroundView" destination="zI7-b9-kOE" id="Faq-4Z-wYU"/>
                         <outlet property="containerView" destination="zI7-b9-kOE" id="gX9-dA-MKO"/>
+                        <outlet property="contentView" destination="cJj-6k-MdN" id="fGm-Qd-esv"/>
                         <outlet property="deleteView" destination="wzx-Mf-8Yd" id="XyD-Uo-hwJ"/>
+                        <outlet property="feedView" destination="P2O-PH-yrf" id="Mvq-fN-jCx"/>
                         <outlet property="laterView" destination="cPL-l5-f0h" id="1dA-SX-PU2"/>
                         <outlet property="listView" destination="kVw-fV-GGk" id="pR6-Mq-2d8"/>
                         <outlet property="mainView" destination="cJj-6k-MdN" id="pcw-Wj-rgR"/>
-                        <outlet property="rescheduleView" destination="Bg1-vE-WKl" id="5qw-o2-dF2"/>
+                        <outlet property="menuView" destination="zGc-DC-aCC" id="TFv-q9-q9O"/>
+                        <outlet property="rescheduleView" destination="Bg1-vE-WKl" id="aQl-Aw-8Fe"/>
                         <outlet property="scrollView" destination="MUc-eo-U9s" id="NuJ-1c-VBx"/>
                         <outlet property="todolistView" destination="GCI-Bg-k8R" id="fk8-ib-4ad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="7H2-i9-HaZ">
-                    <connections>
-                        <action selector="onTap:" destination="vXZ-lx-hvc" id="aWM-7G-AMu"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="Nne-Sp-EUs">
                     <connections>
                         <action selector="onPanView:" destination="vXZ-lx-hvc" id="h6x-xA-CGy"/>
                     </connections>
                 </panGestureRecognizer>
+                <tapGestureRecognizer id="1Uc-ed-Sjk" userLabel="onTapList">
+                    <connections>
+                        <action selector="onTapList:" destination="vXZ-lx-hvc" id="cTn-pU-Xhq"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="36R-fw-4vQ" userLabel="onTapResched">
+                    <connections>
+                        <action selector="onTapReschedule:" destination="vXZ-lx-hvc" id="BzF-EN-eYs"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-79" y="118"/>
         </scene>

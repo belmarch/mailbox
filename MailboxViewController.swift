@@ -21,13 +21,21 @@ class MailboxViewController: UIViewController {
     @IBOutlet weak var listView: UIImageView!
     @IBOutlet weak var rescheduleView: UIImageView!
     @IBOutlet weak var todolistView: UIImageView!
+    @IBOutlet weak var menuView: UIImageView!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var feedView: UIImageView!
     
     var originalViewCenter: CGPoint!
+    var originalContentCenter: CGPoint!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.contentSize = CGSize(width: 320, height: 1000)
+        
+        var edgeGesture = UIScreenEdgePanGestureRecognizer(target: self, action: "onEdgePan:")
+        edgeGesture.edges = UIRectEdge.Left
+        contentView.addGestureRecognizer(edgeGesture)
         
         // Do any additional setup after loading the view.
     }
@@ -57,14 +65,21 @@ class MailboxViewController: UIViewController {
             originalViewCenter = containerView.center
             rescheduleView.alpha=0
             deleteView.alpha=0
+            listView.alpha = 0
+            archiveView.alpha = 1
+            laterView.alpha = 1
         }
         else if gestureRecognizer.state == UIGestureRecognizerState.Changed {
             println("Pan changed")
             containerView.center = CGPoint (x: originalViewCenter.x + translation.x, y: originalViewCenter.y)
             
-   
             
-            if translation.x > 60 {
+            if translation.x > 0 && translation.x <= 60 {
+                archiveView.alpha = translation.x / 60
+            }
+            
+            
+            if translation.x > 60 && translation.x < 260 {
                 archiveView.alpha=1
                 deleteView.alpha=0
                 laterView.alpha=0
@@ -72,7 +87,7 @@ class MailboxViewController: UIViewController {
                 mainView.backgroundColor = UIColor.greenColor()
                 archiveView.frame.origin.x = translation.x - 45
             }
-            if translation.x > 260 {
+            if translation.x >= 260 {
                 archiveView.alpha=0
                 deleteView.alpha=1
                 laterView.alpha=0
@@ -81,7 +96,11 @@ class MailboxViewController: UIViewController {
                 deleteView.frame.origin.x = translation.x - 45
             }
             
-           if translation.x < -60 {
+            if translation.x < 0 && translation.x >= -60 {
+                laterView.alpha = -(translation.x / 60)
+            }
+            
+            if translation.x < -60  && translation.x > -260 {
                 archiveView.alpha=0
                 deleteView.alpha=0
                 laterView.alpha=1
@@ -90,6 +109,7 @@ class MailboxViewController: UIViewController {
                 laterView.frame.origin.x = translation.x + 340
             }
 
+            
             if translation.x < -260 {
                 archiveView.alpha=0
                 deleteView.alpha=0
@@ -99,19 +119,31 @@ class MailboxViewController: UIViewController {
                 listView.frame.origin.x = translation.x + 340
             }
             
-
-
-            
         }
+            
         else if gestureRecognizer.state == UIGestureRecognizerState.Ended {
             
             println("Pan ended")
             containerView.center = CGPoint (x: originalViewCenter.x, y: originalViewCenter.y)
             
+            
+            if translation.x > 60 && translation.x <= 260 {
+                UIView.animateWithDuration(0.2, animations: { () -> Void in
+                self.scrollView.contentOffset.y = 80
+                })
+            }
+            
+            if translation.x > 260 {
+                UIView.animateWithDuration(0.2, animations: { () -> Void in
+                    self.scrollView.contentOffset.y = 80
+                })
+            }
+            
             if translation.x < -60 && translation.x > -260 {
                 todolistView.alpha=1
             }
-            if translation.x < -260 {
+            
+            if translation.x <= -260 {
                 rescheduleView.alpha=1
             }
 
@@ -119,11 +151,55 @@ class MailboxViewController: UIViewController {
 
     }
 
-    @IBAction func onTap(sender: AnyObject) {
-        todolistView.alpha=0
-        rescheduleView.alpha=0
-    }
+    
 
+
+    @IBAction func onTapList(sender: AnyObject) {
+        todolistView.alpha=0
+        UIView.animateWithDuration(0.2, animations: { () -> Void in
+        self.scrollView.contentOffset.y = 80
+        })
+    }
+    
+    @IBAction func onTapReschedule(sender: AnyObject) {
+        rescheduleView.alpha=0
+        UIView.animateWithDuration(0.2, animations: { () -> Void in
+        self.scrollView.contentOffset.y = 80
+        })
+    }
+    
+
+    
+    @IBAction func onEdgePan(gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
+        
+       
+    
+        var location = gestureRecognizer.locationInView(view)
+        var velocity = gestureRecognizer.velocityInView(view)
+        var translation = gestureRecognizer.translationInView(view)
+        
+        
+        if gestureRecognizer.state == UIGestureRecognizerState.Began {
+            originalContentCenter = contentView.center
+            println("Edge pan began \(originalContentCenter.x), \(originalContentCenter.y)")
+        }
+        else if gestureRecognizer.state == UIGestureRecognizerState.Changed {
+            println("Edge pan changed \(contentView.center)")
+            
+            contentView.frame.origin.x = translation.x
+            contentView.frame.origin.y = 0
+        }
+        else if gestureRecognizer.state == UIGestureRecognizerState.Ended {
+            UIView.animateWithDuration(0.2, animations: { () -> Void in
+            self.contentView.center = CGPoint (x: self.originalContentCenter.x, y: self.originalContentCenter.y)
+             })
+            println("Edge pan ended \(contentView.center)")
+        }
+        
+    
+    }
+    
+    
     /*
     // MARK: - Navigation
 
