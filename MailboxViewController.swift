@@ -98,6 +98,7 @@ class MailboxViewController: UIViewController {
                 mainView.backgroundColor = UIColor.brownColor()
                 listView.frame.origin.x = translation.x + 340
             }
+            
 
 
             
